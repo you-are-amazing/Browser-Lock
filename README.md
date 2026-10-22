@@ -4,6 +4,8 @@
 
 ---
 
+![Browser Lock](lock1.png)
+
 ## Key Features
 - **Zero Chrome Account Interference:** Uses local and session storage exclusively. It never interferes with Google Account sign-ins, token refreshes, browsing data, or cloud sync.
 - **True Black / Obsidian Dark Theme:** Features a sleek, high-contrast monochrome dark mode designed for privacy and comfort.
