@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Browser Lock Pro",
+  "version": "2.1.0",
+  "description": "Securely lock your browser and profile windows with a master password without affecting your Chrome account data.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "idle"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Lock Browser (Alt+L)",
+    "default_icon": "logo.png"
+  },
+  "options_page": "options.html",
+  "commands": {
+    "lock-browser": {
+      "suggested_key": {
+        "default": "Alt+L",
+        "mac": "Alt+L"
+      },
+      "description": "Immediately lock the browser"
+    }
+  },
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  }
+}

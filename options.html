@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browser Lock Pro - Settings</title>
+  <style>
+    :root {
+      --bg: #000000;
+      --card: #0c0c0c;
+      --border: #222222;
+      --primary: #ffffff;
+      --primary-hover: #e5e5e5;
+      --primary-text: #000000;
+      --text: #f5f5f5;
+      --muted: #888888;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 3rem 1.5rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 560px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+    }
+
+    .header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .quick-lock-btn {
+      background: #171717;
+      color: #f87171;
+      border: 1px solid #331515;
+      padding: 0.6rem 1rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .quick-lock-btn:hover {
+      background: #241414;
+      border-color: #ef4444;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      margin-bottom: 0.35rem;
+      color: #ffffff;
+    }
+
+    .card p.desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .field {
+      margin-bottom: 1rem;
+    }
+
+    .field label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: #bdbdbd;
+    }
+
+    .field input[type="password"],
+    .field select {
+      width: 100%;
+      padding: 0.8rem 0.9rem;
+      background: #141414;
+      border: 1px solid #2a2a2a;
+      border-radius: 10px;
+      color: var(--text);
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    .field input:focus,
+    .field select:focus {
+      border-color: #ffffff;
+    }
+
+    .row-setting {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .row-setting:last-child {
+      border-bottom: none;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--primary-text);
+      border: none;
+      padding: 0.85rem 1.25rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 0.5rem;
+      transition: background 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+
+    .alert {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      min-height: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Browser Lock Pro</h1>
+      <button id="lockNowBtn" class="quick-lock-btn">Lock Browser Now (Alt+L)</button>
+    </div>
+
+    <section class="card">
+      <h2 id="passwordSectionTitle">Set Master Password</h2>
+      <p class="desc">Your password hash is stored locally on this device only and never modifies your Google Account sync.</p>
+
+      <form id="passwordForm">
+        <div class="field" id="currentPasswordWrapper" style="display: none;">
+          <label for="currentPassword">Current Password</label>
+          <input type="password" id="currentPassword" placeholder="Enter current password" />
+        </div>
+
+        <div class="field">
+          <label for="newPassword">New Password</label>
+          <input type="password" id="newPassword" placeholder="At least 4 characters" required />
+        </div>
+
+        <div class="field">
+          <label for="confirmPassword">Confirm New Password</label>
+          <input type="password" id="confirmPassword" placeholder="Re-enter new password" required />
+        </div>
+
+        <button type="submit" class="btn-primary">Save Password</button>
+        <div id="passwordStatus" class="alert"></div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Lock Preferences</h2>
+      <p class="desc">Customize when your browser locks automatically.</p>
+
+      <div class="row-setting">
+        <div>
+          <strong>Lock When Profile Opens / Reopens</strong>
+          <div style="font-size: 0.8rem; color: var(--muted);">Require password on browser startup or when reopening this Chrome profile</div>
+        </div>
+        <input type="checkbox" id="lockOnStartup" style="width: 18px; height: 18px; accent-color: #ffffff;" />
+      </div>
+
+      <div class="field" style="margin-top: 1rem;">
+        <label for="autoLockMinutes">Auto-Lock When Idle</label>
+        <select id="autoLockMinutes">
+          <option value="0">Disabled</option>
+          <option value="1">After 1 minute of inactivity</option>
+          <option value="5">After 5 minutes of inactivity</option>
+          <option value="15">After 15 minutes of inactivity</option>
+          <option value="30">After 30 minutes of inactivity</option>
+        </select>
+      </div>
+      <div id="prefStatus" class="alert"></div>
+    </section>
+  </div>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>
