@@ -4,7 +4,7 @@
 
 ---
 
-## ✨ Key Features
+## Key Features
 - **Zero Chrome Account Interference:** Uses local and session storage exclusively. It never interferes with Google Account sign-ins, token refreshes, browsing data, or cloud sync.
 - **True Black / Obsidian Dark Theme:** Features a sleek, high-contrast monochrome dark mode designed for privacy and comfort.
 - **Inline Password Management:** Change your master password directly from the `Browser Locked` screen or via the extension settings.
@@ -14,7 +14,7 @@
 
 ---
 
-## 📦 Installation Guide
+## Installation Guide
 
 ### Option A: Install Locally (Recommended for Developers)
 1. Download and extract the **`Browser-Lock-Pro-v2.zip`** project folder.
@@ -26,7 +26,7 @@
 
 ---
 
-## 🚀 How to Use
+## How to Use
 
 1. **Set Up Your Password:**
    * Click the **Browser Lock Pro** extension icon (or it will open automatically on first install).
@@ -41,11 +41,11 @@
 
 ---
 
-## 🔒 Privacy & Security
+## Privacy & Security
 - **Local-Only Storage:** Your password hash and salt are securely generated using the native Web Crypto API (`PBKDF2` with `SHA-256` and 100,000 iterations) and stored locally within your Chrome profile (`chrome.storage.local`).
 - **No External Servers:** Browser Lock Pro operates entirely offline. It requires no online account and never transmits passwords or browsing data externally.
 
 ---
 
-## 📄 License
+## License
 This project is licensed under the **MIT License**.
