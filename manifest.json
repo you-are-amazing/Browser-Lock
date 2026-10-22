@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Browser Lock Pro",
+  "name": "Browser Lock",
   "version": "2.1.0",
   "description": "Securely lock your browser and profile windows with a master password without affecting your Chrome account data.",
   "permissions": [

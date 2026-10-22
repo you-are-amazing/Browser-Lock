@@ -1,6 +1,6 @@
-# Browser Lock Pro
+# Browser Lock
 
-**Browser Lock Pro** is a secure, modern Chrome extension that protects your browsing session and profile with a master password. It locks open tabs automatically when Chrome or your profile starts, shields new tabs and windows while locked, and preserves your active tabs upon unlocking—all while keeping your Chrome account data, cookies, and Google Sync 100% untouched.
+**Browser Lock** is a secure, modern Chrome extension that protects your browsing session and profile with a master password. It locks open tabs automatically when Chrome or your profile starts, shields new tabs and windows while locked, and preserves your active tabs upon unlocking—all while keeping your Chrome account data, cookies, and Google Sync 100% untouched.
 
 ---
 
@@ -17,19 +17,19 @@
 ## Installation Guide
 
 ### Option A: Install Locally (Recommended for Developers)
-1. Download and extract the **`Browser-Lock-Pro-v2.zip`** project folder.
+1. Download and extract the project folder.
 2. Open Chrome and navigate to `chrome://extensions/`.
 3. Enable **Developer mode** using the toggle switch in the top-right corner.
 4. Click **Load unpacked** in the top-left corner.
-5. Select the **`Browser-Lock-Pro-v2`** folder containing `manifest.json`.
-6. Click the extensions puzzle icon in Chrome and **pin Browser Lock Pro** for quick access.
+5. Select the **`Browser-Lock`** folder containing `manifest.json`.
+6. Click the extensions puzzle icon in Chrome and **pin Browser Lock** for quick access.
 
 ---
 
 ## How to Use
 
 1. **Set Up Your Password:**
-   * Click the **Browser Lock Pro** extension icon (or it will open automatically on first install).
+   * Click the **Browser Lock** extension icon (or it will open automatically on first install).
    * Create and confirm your master password in the settings page.
 2. **Lock Your Browser:**
    * Click **Lock Browser Now** in settings, press the `Alt + L` keyboard shortcut, or click the extension icon.
@@ -43,7 +43,7 @@
 
 ## Privacy & Security
 - **Local-Only Storage:** Your password hash and salt are securely generated using the native Web Crypto API (`PBKDF2` with `SHA-256` and 100,000 iterations) and stored locally within your Chrome profile (`chrome.storage.local`).
-- **No External Servers:** Browser Lock Pro operates entirely offline. It requires no online account and never transmits passwords or browsing data externally.
+- **No External Servers:** Browser Lock operates entirely offline. It requires no online account and never transmits passwords or browsing data externally.
 
 ---
 
